@@ -3,7 +3,7 @@
 
 // import/update definition of pods objects
 function pod_objects_loader () {
-  $path = __DIR__ . '/pods_objects';
+  $path = plugin_dir_path() . '/pods_objects';
   if ( class_exists( 'Pods_Migrate_Packages' ) ) {
     foreach (glob($path . '/' . "*.json") as $filename) {
       // echo "$filename size " . filesize($filename) . "\n";
